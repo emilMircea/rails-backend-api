@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: 'json'} do
     namespace :v1 do
       resources :contacts
-      resources :sessions, only: [:create, :destroy]
+      resource :sessions, only: [:create, :destroy]
     end
   end
   resources :contacts
