@@ -14,7 +14,7 @@ class Api::V1::ContactsControllerTest < ActionDispatch::IntegrationTest
 
 test "should destroy contact" do
   contact = contacts(:one)
-  contact_url = 'http://localhost:3000/api/v1/contacts/1'
+  contact_url = "http://localhost:3000/api/v1/contacts/#{contact.id}"
   # assert_equal(2, Contact.count)
   # assert_equal('2', "#{Contact.count}")
   assert_difference('Contact.count', -1) do
