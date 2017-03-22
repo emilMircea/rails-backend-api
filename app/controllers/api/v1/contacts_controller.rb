@@ -4,11 +4,11 @@ class Api::V1::ContactsController < ApplicationController
     @contacts = Contact.all
     render json: @contacts, status: :ok
   end
+
   def create
     @contact = Contact.new(contact_params)
-
     @contact.save
-    render json: :contact, status: :created
+    render json: @contact, status: :created
   end
 
   def destroy
