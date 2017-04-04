@@ -1,18 +1,18 @@
 class Api::V1::ContactsController < ApplicationController
   def index
     # byebug
-    @contacts = Contact.all
+    @contacts = current_user.contacts
     render json: @contacts, status: :ok
   end
 
   def create
-    @contact = Contact.new(contact_params)
+    @contact = current_user.contacts.build(contact_params)
     @contact.save
     render json: @contact, status: :created
   end
 
   def destroy
-    @contact = Contact.find(params[:id])
+    @contact = current_user.contacts.where(params[:id]).first
     if @contact.destroy
       head(:ok)
     else
