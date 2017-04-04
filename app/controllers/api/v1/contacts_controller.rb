@@ -12,7 +12,7 @@ class Api::V1::ContactsController < ApplicationController
   end
 
   def destroy
-    @contact = current_user.contacts.where(params[:id]).first
+    @contact = current_user.contacts.where(id: params[:id]).first
     if @contact.destroy
       head(:ok)
     else
