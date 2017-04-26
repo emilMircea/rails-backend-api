@@ -41,3 +41,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '~> 4.2'
 gem 'simple_token_authentication', '~> 1.15', '>= 1.15.1'
+gem 'friendly_id', '~> 5.2', '>= 5.2.1'
