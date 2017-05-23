@@ -1,5 +1,5 @@
 class Api::V1::ContactsController < ApplicationController
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
   def index
     # byebug
     @contacts = current_user.contacts
