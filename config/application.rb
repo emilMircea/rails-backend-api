@@ -35,6 +35,6 @@ module RailsBackendApi
         methods: [:get, :post, :put, :patch, :delete, :options]
       end
     end
-
+    
   end
 end
