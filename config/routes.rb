@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root to: 'api/v1/contacts'
+  # root to: 'api/v1/contacts'
 
   devise_for :users
 
